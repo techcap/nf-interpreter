@@ -1,0 +1,62 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "nanoBooter",
+      "type": "cppdbg",
+      "request": "launch",
+      "miDebuggerPath": "C:/Program Files (x86)/GNU Tools ARM Embedded/6 2017-q2-update/bin/arm-none-eabi-gdb.exe",
+      "targetArchitecture": "ARM",
+      "program": "${workspaceRoot}/build/nanoBooter.elf",
+
+      "setupCommands": [
+        { "text": "target extended-remote localhost:3333" },
+        { "text": "monitor reset halt" },
+        { "text": "monitor flash write_image erase \"c:/work/nf-interpreter/build/nanoBooter.hex\"" },
+        { "text": "file c:/work/nf-interpreter/build/nanoBooter.elf" },
+        { "text": "monitor reset halt" }
+      ],
+
+      "customLaunchSetupCommands": [
+        { "text": "monitor reset halt" }
+      ],
+
+      "launchCompleteCommand": "exec-continue",
+      "debugServerPath": "D:/Backup/DevelopmentTools/OpenOCD-20170609/bin/openocd.exe",
+      "debugServerArgs": "-s \"D:/Backup/DevelopmentTools/OpenOCD-20170609/share/openocd/scripts\" -f interface/stlink-v2-1.cfg -f board/stm32f4discovery.cfg",
+      "serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+      "filterStderr": true,
+      "externalConsole": true,
+      "cwd": "${cwd}"
+    },
+
+    {
+      "name": "nanoCLR",
+      "type": "cppdbg",
+      "request": "launch",
+      "miDebuggerPath": "C:/Program Files (x86)/GNU Tools ARM Embedded/6 2017-q2-update/bin/arm-none-eabi-gdb.exe",
+      "targetArchitecture": "ARM",
+      "program": "${workspaceRoot}/build/nanoCLR.elf",
+
+      "setupCommands": [
+        { "text": "target extended-remote localhost:3333" },
+        { "text": "monitor reset halt" },
+        { "text": "monitor flash write_image erase \"c:/work/nf-interpreter/build/nanoCLR.hex\"" },
+        { "text": "file c:/work/nf-interpreter/build/nanoCLR.elf" },
+        { "text": "monitor reset halt" }
+      ],
+
+      "customLaunchSetupCommands": [
+        { "text": "monitor reset halt" }
+      ],
+
+      "launchCompleteCommand": "exec-continue",
+      "debugServerPath": "D:/Backup/DevelopmentTools/OpenOCD-20170609/bin/openocd.exe",
+      "debugServerArgs": "-s \"D:/Backup/DevelopmentTools/OpenOCD-20170609/share/openocd/scripts\" -f interface/stlink-v2-1.cfg -f board/stm32f4discovery.cfg",
+      "serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+      "filterStderr": true,
+      "externalConsole": true,
+      "cwd": "${cwd}"
+    }
+  ]
+}

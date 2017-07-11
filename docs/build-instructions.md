@@ -22,6 +22,7 @@ If you are using VS Code as your development platform we suggest that you use th
 - [Visual Studio Code](http://code.visualstudio.com/)
 - [CMake Extension](https://marketplace.visualstudio.com/items?itemName=twxs.cmake)
 - [CMake Tools Extension](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.cmake-tools)
+- [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
 In case you specify an RTOS and you want its source to be downloaded from the official repository, you'll need:
 - For FreeRTOS a SVN client. [Tortoise SVN](https://tortoisesvn.net/downloads) seems to be a popular choice for Windows machines.
